@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praveen | Portfolio </title>
+    <meta name="description"
+        content="Portfolio of Praveen Kumar R - MCA Graduate (2026 Pass Out), Front-End Developer, and Software Trainee based in Chennai.">
+
+    <!-- Favicon / Tab Title Icon ({ PK } brand style) -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='none'%3E%3Crect width='32' height='32' rx='8' fill='%230f172a'/%3E%3Ctext x='16' y='21' font-family='sans-serif' font-size='13' font-weight='800' text-anchor='middle' fill='%2338bdf8'%3EPK%3C/text%3E%3Ctext x='5' y='21' font-family='monospace' font-size='14' font-weight='700' fill='%2310b981'%3E{%3C/text%3E%3Ctext x='27' y='21' font-family='monospace' font-size='14' font-weight='700' fill='%2310b981'%3E}%3C/text%3E%3C/svg%3E" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Lucide Icons (Exact icon library from praveengongada.com) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <!-- Devicon Icons (for colored brand logos) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll_progress" id="scrollProgress"></div>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nav_container">
+            <a href="#home" class="logo">
+                <span class="logo_bracket">{</span><span class="logo_pk">PK</span><span class="logo_bracket">}</span>
+            </a>
+            <div class="nav_menu_btn" id="menu-btn" aria-label="Toggle Navigation">
+                <i data-lucide="menu"></i>
+            </div>
+            <ul class="nav_links" id="nav_links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav_actions">
+                <button class="mode_toggle_btn" id="modeToggle" title="Toggle Dark/Light Mode"
+                    aria-label="Toggle Dark/Light Mode">
+                    <i data-lucide="moon"></i>
+                </button>
+                <a href="Praveen_CV.pdf" class="btn btn_desktop"><i data-lucide="send"></i> Download CV</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Background Ambient Glow -->
+    <div class="hero_glow glow_1"></div>
+    <div class="hero_glow glow_2"></div>
+
+    <!-- Hero Section -->
+    <header class="section_container header_container" id="home">
+        <div class="header_content reveal">
+            <div class="status_badge">
+                <span class="pulse_dot"></span> MCA Graduate || Open to All Roles
+            </div>
+            <h1>Hi, I'm Praveen<br />
+                <span class="gradient_text">
+                    <span id="typing-text"></span><span class="typing_cursor">|</span>
+                </span>
+            </h1>
+            <p>
+                An enthusiastic and self-driven MCA graduate with a strong foundation in front-end-development, Python
+                (Basic),
+                and data analysis. Eager to contribute to dynamic software development teams.
+            </p>
+            <!--
+            <div class="header_btn">
+                <a href="https://wa.me/7299806051" target="_blank" class="btn"><i class="ri-whatsapp-line"></i> WhatsApp</a>
+                <a href="#projects" class="btn btn-outline"><i data-lucide="folder-git-2"></i> View Projects</a>
+                <a href="https://github.com/Praveen9841" target="_blank" class="btn btn-outline">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: -3px; margin-right: 4px;">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                    </svg> GitHub Profile
+                </a>
+            </div>
+            -->
+            <div class="hero_tech_stack">
+                <span>Key Tech:</span>
+                <div class="tech_badges">
+                    <span title="HTML5"><i class="devicon-html5-plain colored"></i></span>
+                    <span title="CSS3"><i class="devicon-css3-plain colored"></i></span>
+                    <!-- <span title="JavaScript"><i class="devicon-javascript-plain colored"></i></span> -->
+                    <span title="React"><i class="devicon-react-original colored"></i></span>
+                    <span title="Python"><i class="devicon-python-plain colored"></i></span>
+                    <!-- <span title="Java"><i class="devicon-java-plain colored"></i></span> -->
+                    <span title="Git"><i class="devicon-git-plain colored"></i></span>
+                </div>
+            </div>
+        </div>
+        <div class="hero_avatar reveal">
+            <!-- Floating Tech Icons (Orbiting Avatar with Brand Colors) -->
+            <div class="float_icon float_1" title="React"><i class="devicon-react-original colored"></i></div>
+            <div class="float_icon float_2" title="JavaScript"><i class="devicon-javascript-plain colored"></i></div>
+            <div class="float_icon float_3" title="Python"><i class="devicon-python-plain colored"></i></div>
+            <div class="float_icon float_4" title="Java"><i class="devicon-java-plain colored"></i></div>
+
+            <div class="avatar_card">
+                <div class="avatar_icon_wrap">
+                    <span class="avatar_brand_badge">{ PK }</span>
+                </div>
+                <h3>Praveen Kumar R</h3>
+                <p>MCA Graduate || Fresher</p>
+                <div class="avatar_pills">
+                    <span><i data-lucide="map-pin"></i> Chennai, Tamil Nadu</span>
+                    <span><i data-lucide="graduation-cap"></i> MCA Graduate (2026) <br>SA Engineering College</span>
+                    <span><i data-lucide="check-circle-2"></i> CodSoft <br> Front-End Developer Intern</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="section_container about_container" id="about">
+
+        <!-- LEFT: Text Content + Stats + Languages -->
+        <div class="about_content reveal">
+            <span class="section_subtitle"><i data-lucide="user"></i> About Me</span>
+            <h2 class="section_header" style="text-align: left;">Passionate Software Trainee &amp; Frontend Developer
+            </h2>
+            <p>
+                I am a Master of Computer Applications (MCA) student graduating in 2026 from <strong>SA Engineering
+                    College, Chennai</strong>. I completed my Bachelor of Computer Applications (BCA) from <strong>St.
+                    Peter's Institute of Higher Education and Research</strong> with 68.2%.
+            </p>
+            <p>
+                My focus lies in building clean, responsive user interfaces using HTML5, CSS3, JavaScript, and React,
+                alongside data analysis skills using Python and Power BI.
+            </p>
+
+            <!-- Stats Row -->
+            <div class="about_stats">
+                <div class="stat_item">
+                    <h4>2026</h4>
+                    <p>MCA Pass Out Year</p>
+                </div>
+                <div class="stat_item">
+                    <h4>2024</h4>
+                    <p>BCA Pass Out Year</p>
+                </div>
+                <div class="stat_item">
+                    <h4>2+</h4>
+                    <p>Internships</p>
+                </div>
+                <div class="stat_item">
+                    <h4>3+</h4>
+                    <p>Certifications</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- RIGHT: Feature Cards + Languages -->
+        <div class="about_cards_side reveal">
+            <div class="about_feature_grid">
+                <div class="about_feature_card">
+                    <div class="about_feature_header">
+                        <div class="feature_icon_badge badge_emerald"><i data-lucide="cpu"></i></div>
+                        <h4>Problem Solver</h4>
+                    </div>
+                    <p>I break down complex challenges with logical thinking and structured solutions.</p>
+                </div>
+                <div class="about_feature_card">
+                    <div class="about_feature_header">
+                        <div class="feature_icon_badge badge_blue"><i data-lucide="terminal"></i></div>
+                        <h4>Clean Code Advocate</h4>
+                    </div>
+                    <p>I value maintainable, modern code that follows web development best practices.</p>
+                </div>
+                <div class="about_feature_card">
+                    <div class="about_feature_header">
+                        <div class="feature_icon_badge badge_purple"><i data-lucide="lightbulb"></i></div>
+                        <h4>Innovative Thinker</h4>
+                    </div>
+                    <p>Constantly exploring modern web frameworks and creative frontend interfaces.</p>
+                </div>
+                <div class="about_feature_card">
+                    <div class="about_feature_header">
+                        <div class="feature_icon_badge badge_cyan"><i data-lucide="bar-chart-2"></i></div>
+                        <h4>User-Focused</h4>
+                    </div>
+                    <p>Prioritizing intuitive, responsive, and accessible user experiences.</p>
+                </div>
+            </div>
+
+            <!-- Languages moved to right column -->
+            <div class="languages_box">
+                <h4><i data-lucide="languages"></i> Languages Spoken:</h4>
+                <p><strong>English</strong> (Professional Proficiency) <br><strong>Marathi</strong> (Native) <br>
+                    <strong>Tamil</strong> (Conversational)
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section_container skills_container" id="skills">
+        <div class="section_center reveal">
+            <span class="section_subtitle"><i data-lucide="code-2"></i> Technical Skills</span>
+            <h2 class="section_header">Skills & Competencies</h2>
+            <p class="section_description">
+                Core technologies and tools I have gained hands-on practice with during my MCA studies and internships.
+            </p>
+        </div>
+
+        <!-- Categorized Tech Stack Showcase (from praveengongada.com) -->
+        <div class="skills_categories_container reveal">
+            <div class="skill_category_box">
+                <div class="skill_category_title">
+                    <i data-lucide="layout"></i>
+                    <span>Front-end-development</span>
+                </div>
+                <div class="skill_badge_pills">
+                    <span class="tech_pill"><i class="devicon-html5-plain colored"></i> HTML5</span>
+                    <span class="tech_pill"><i class="devicon-css3-plain colored"></i> CSS3</span>
+                    <span class="tech_pill"><i class="devicon-javascript-plain colored"></i> JavaScript</span>
+                    <span class="tech_pill"><i class="devicon-react-original colored"></i> React</span>
+                    <!-- <span class="tech_pill"><i class="devicon-tailwindcss-original colored"></i> Tailwind CSS</span> -->
+                </div>
+            </div>
+
+            <div class="skill_category_box">
+                <div class="skill_category_title">
+                    <i data-lucide="server"></i>
+                    <span>Programming & Core</span>
+                </div>
+                <div class="skill_badge_pills">
+                    <span class="tech_pill"><i class="devicon-python-plain colored"></i> Python</span>
+                    <span class="tech_pill"><i class="devicon-java-plain colored"></i> Java</span>
+                    <span class="tech_pill"><i class="devicon-nodejs-plain colored"></i> Node.js</span>
+                    <span class="tech_pill"><i class="devicon-express-original"></i> Express.js</span>
+                </div>
+            </div>
+
+            <div class="skill_category_box">
+                <div class="skill_category_title">
+                    <i data-lucide="database"></i>
+                    <span>Tools & Data Analytics</span>
+                </div>
+                <div class="skill_badge_pills">
+                    <span class="tech_pill"><i class="devicon-git-plain colored"></i> Git</span>
+                    <span class="tech_pill"><i class="devicon-github-original"></i> GitHub</span>
+                    <span class="tech_pill"><i class="devicon-vscode-plain colored"></i> VS Code</span>
+                    <span class="tech_pill"><i class="ri-bar-chart-2-line" style="color: #f2c811;"></i> Power BI</span>
+                    <span class="tech_pill"><i class="ri-file-excel-2-line" style="color: #107c41;"></i> Excel</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Toggle More Details Button -->
+        <div class="skills_toggle_container reveal">
+            <button class="btn btn-outline skills_more_btn" id="skillsToggleBtn" aria-expanded="false">
+                <span class="btn_icon_left"><i data-lucide="bar-chart-3"></i></span>
+                <span class="skills_btn_text">View More Details (Proficiency & Progress)</span>
+                <span class="btn_icon_right"><i data-lucide="chevron-down"></i></span>
+            </button>
+        </div>
+
+        <!-- Competency Progress Bars with Official Brand Icons (Collapsible Details) -->
+        <div class="skills_grid skills_details_collapsed" id="skillsDetailsGrid">
+            <div class="skill_card">
+                <div class="skill_header">
+                    <div class="skill_title">
+                        <i class="devicon-html5-plain colored skill_icon"></i>
+                        <span>HTML5 & Semantic Web</span>
+                    </div>
+                    <span class="skill_perc">90%</span>
+                </div>
+                <div class="skill_bar">
+                    <div class="skill_progress" style="--perc: 90%;"></div>
+                </div>
+            </div>
+
+            <div class="skill_card">
+                <div class="skill_header">
+                    <div class="skill_title">
+                        <i class="devicon-css3-plain colored skill_icon"></i>
+                        <span>CSS3 & Responsive Design</span>
+                    </div>
+                    <span class="skill_perc">88%</span>
+                </div>
+                <div class="skill_bar">
+                    <div class="skill_progress" style="--perc: 88%;"></div>
+                </div>
+            </div>
+
+            <div class="skill_card">
+                <div class="skill_header">
+                    <div class="skill_title">
+                        <i class="devicon-javascript-plain colored skill_icon"></i>
+                        <span>JavaScript (ES6+)</span>
+                    </div>
+                    <span class="skill_perc">80%</span>
+                </div>
+                <div class="skill_bar">
+                    <div class="skill_progress" style="--perc: 80%;"></div>
+                </div>
+            </div>
+
+            <div class="skill_card">
+                <div class="skill_header">
+                    <div class="skill_title">
+                        <i class="devicon-react-original colored skill_icon"></i>
+                        <span>React (Basic)</span>
+                    </div>
+                    <span class="skill_perc">70%</span>
+                </div>
+                <div class="skill_bar">
+                    <div class="skill_progress" style="--perc: 70%;"></div>
+                </div>
+            </div>
+
+            <div class="skill_card">
+                <div class="skill_header">
+                    <div class="skill_title">
+                        <i class="devicon-python-plain colored skill_icon"></i>
+                        <span>Python (Basics)</span>
+                    </div>
+                    <span class="skill_perc">75%</span>
+                </div>
+                <div class="skill_bar">
+                    <div class="skill_progress" style="--perc: 75%;"></div>
+                </div>
+            </div>
+
+            <div class="skill_card">
+                <div class="skill_header">
+                    <div class="skill_title">
+                        <i class="devicon-java-plain colored skill_icon"></i>
+                        <span>Java (Basics)</span>
+                    </div>
+                    <span class="skill_perc">70%</span>
+                </div>
+                <div class="skill_bar">
+                    <div class="skill_progress" style="--perc: 70%;"></div>
+                </div>
+            </div>
+
+            <div class="skill_card">
+                <div class="skill_header">
+                    <div class="skill_title">
+                        <i class="devicon-git-plain colored skill_icon"></i>
+                        <span>Git & GitHub</span>
+                    </div>
+                    <span class="skill_perc">82%</span>
+                </div>
+                <div class="skill_bar">
+                    <div class="skill_progress" style="--perc: 82%;"></div>
+                </div>
+            </div>
+
+            <div class="skill_card">
+                <div class="skill_header">
+                    <div class="skill_title">
+                        <i class="ri-bar-chart-2-line skill_icon powerbi_icon"></i>
+                        <span>Power BI & Data Analysis</span>
+                    </div>
+                    <span class="skill_perc">75%</span>
+                </div>
+                <div class="skill_bar">
+                    <div class="skill_progress" style="--perc: 75%;"></div>
+                </div>
+            </div>
+
+            <div class="skill_card">
+                <div class="skill_header">
+                    <div class="skill_title">
+                        <i class="devicon-vscode-plain colored skill_icon"></i>
+                        <span>VS Code & Debugging</span>
+                    </div>
+                    <span class="skill_perc">85%</span>
+                </div>
+                <div class="skill_bar">
+                    <div class="skill_progress" style="--perc: 85%;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Merged Education & Experience Section (Alternating Center Timeline) -->
+    <section class="section_container education_container" id="education" style="position: relative;">
+        <!-- Retain experience anchor so any bookmarks or references scroll here smoothly -->
+        <div id="experience" style="position: absolute; top: -100px;"></div>
+
+        <div class="section_center reveal">
+            <h2 class="section_header" style="text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 0.4rem;">
+                EDUCATION & EXPERIENCE</h2>
+            <p class="section_description" style="font-size: 1.05rem; color: var(--text-muted); margin-bottom: 1.2rem;">
+                The stuff I am made up of.
+            </p>
+
+            <!-- Filter Pills (All / Education / Internships) -->
+            <div class="edu_filter_tabs">
+                <button class="edu_filter_btn active" data-filter="all">
+                    <i data-lucide="layers"></i> All Milestones
+                </button>
+                <button class="edu_filter_btn" data-filter="education">
+                    <i data-lucide="graduation-cap"></i> Education
+                </button>
+                <button class="edu_filter_btn" data-filter="internship">
+                    <i data-lucide="briefcase"></i> Internships
+                </button>
+            </div>
+        </div>
+
+        <div class="edu_timeline reveal">
+            <!-- 1. MCA Degree (Card Left, Date Right) -->
+            <div class="edu_item" data-category="education">
+                <div class="edu_col_left">
+                    <div class="edu_card">
+                        <div class="edu_card_main">
+                            <span class="edu_type_badge edu_type_edu"><i data-lucide="graduation-cap"></i>
+                                Education</span>
+                            <h3>Master of Computer Applications (MCA)</h3>
+                            <p class="edu_institution">SA Engineering College, Anna University (Pass Out 2026)</p>
+                            <button class="edu_toggle_btn" aria-label="Toggle details" title="View details">
+                                <i data-lucide="chevron-down"></i>
+                            </button>
+                        </div>
+                        <div class="edu_details">
+                            <ul>
+                                <li>Specialized in Web Application Development, Software Architecture & Cloud Computing.
+                                </li>
+                                <li>Built Workflow Automation System (MERN Stack) and responsive frontend interfaces.
+                                </li>
+                                <li>NPTEL certified in Cloud Computing (IIT Kanpur) & Beeja Academy Java Full Stack.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Center Circular Node with Graduation Cap -->
+                <div class="edu_node edu_node_edu" title="Education">
+                    <i data-lucide="graduation-cap"></i>
+                </div>
+
+                <div class="edu_col_right edu_col_date">
+                    <span class="edu_date_text">2024 - 2026</span>
+                </div>
+            </div>
+
+            <!-- 2. GPublishing Service Intern (Date Left, Card Right) -->
+            <div class="edu_item item_reverse" data-category="internship">
+                <div class="edu_col_left edu_col_date">
+                    <span class="edu_date_text">June 2025 - July 2025</span>
+                </div>
+
+                <!-- Center Circular Node with Briefcase -->
+                <div class="edu_node edu_node_work" title="Internship">
+                    <i data-lucide="briefcase"></i>
+                </div>
+
+                <div class="edu_col_right">
+                    <div class="edu_card">
+                        <div class="edu_card_main">
+                            <span class="edu_type_badge edu_type_work"><i data-lucide="briefcase"></i> Internship</span>
+                            <h3>XML Creator & Editor Intern</h3>
+                            <p class="edu_institution">GPublishing Service (Offline)</p>
+                            <button class="edu_toggle_btn" aria-label="Toggle details" title="View details">
+                                <i data-lucide="chevron-down"></i>
+                            </button>
+                        </div>
+                        <div class="edu_details">
+                            <ul>
+                                <li>Created and edited XML files for structured document formatting in digital book
+                                    publishing workflows.</li>
+                                <li>Collaborated with editorial team members applying content formatting and quality
+                                    assurance standards.</li>
+                                <li>Gained practical experience in document metadata management and structured content
+                                    delivery.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. CodSoft Intern (Card Left, Date Right) -->
+            <div class="edu_item" data-category="internship">
+                <div class="edu_col_left">
+                    <div class="edu_card">
+                        <div class="edu_card_main">
+                            <span class="edu_type_badge edu_type_work"><i data-lucide="code"></i> Internship</span>
+                            <h3>FrontEnd Developer Intern</h3>
+                            <p class="edu_institution">CodSoft (Online)</p>
+                            <button class="edu_toggle_btn" aria-label="Toggle details" title="View details">
+                                <i data-lucide="chevron-down"></i>
+                            </button>
+                        </div>
+                        <div class="edu_details">
+                            <ul>
+                                <li>Developed and optimized responsive web pages using HTML, CSS, JavaScript with a
+                                    focus on UI/UX improvements.</li>
+                                <li>Ensured cross-browser compatibility and applied object-oriented design principles
+                                    and debugging techniques.</li>
+                                <li>Used Git version control to manage code cleanly within an agile workflow.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Center Circular Node with Code/Briefcase -->
+                <div class="edu_node edu_node_work" title="Internship">
+                    <i data-lucide="code"></i>
+                </div>
+
+                <div class="edu_col_right edu_col_date">
+                    <span class="edu_date_text">May 2025 - June 2025</span>
+                </div>
+            </div>
+
+            <!-- 4. BCA Degree (Date Left, Card Right) -->
+            <div class="edu_item item_reverse" data-category="education">
+                <div class="edu_col_left edu_col_date">
+                    <span class="edu_date_text">2021 - 2024</span>
+                </div>
+
+                <!-- Center Circular Node with Graduation Cap -->
+                <div class="edu_node edu_node_edu" title="Education">
+                    <i data-lucide="graduation-cap"></i>
+                </div>
+
+                <div class="edu_col_right">
+                    <div class="edu_card">
+                        <div class="edu_card_main">
+                            <span class="edu_type_badge edu_type_edu"><i data-lucide="graduation-cap"></i>
+                                Education</span>
+                            <h3>Bachelor of Computer Applications (BCA)</h3>
+                            <p class="edu_institution">St. Peter's Institute of Higher Education & Research (68.2%)</p>
+                            <button class="edu_toggle_btn" aria-label="Toggle details" title="View details">
+                                <i data-lucide="chevron-down"></i>
+                            </button>
+                        </div>
+                        <div class="edu_details">
+                            <ul>
+                                <li>Completed with <strong>68.2% Aggregate</strong> (First Class with Distinction in
+                                    core subjects).</li>
+                                <li>Strong foundational core in Programming (C, Java, Python), Web Design, and Data
+                                    Structures.</li>
+                                <li>Earned official ICT Academy Data Analytics Certification.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section_container projects_container" id="projects">
+        <div class="section_center reveal">
+            <span class="section_subtitle"><i data-lucide="folder-git-2"></i> Academic & Practical Work</span>
+            <h2 class="section_header">Featured Projects</h2>
+            <p class="section_description">
+                Projects developed during my MCA studies and personal practice.
+            </p>
+        </div>
+
+        <div class="projects_grid reveal">
+            <!-- Project 1 -->
+            <div class="project_card">
+                <div class="project_card_header">
+                    <i data-lucide="workflow" class="project_icon"></i>
+                    <span class="project_date">Dec 2025 - Apr 2026</span>
+                </div>
+                <h3>Workflow Automation System (MERN Stack)</h3>
+                <p>
+                    A comprehensive web application designed to automate task management and user workflows.
+                </p>
+                <ul class="project_bullets">
+                    <li><i data-lucide="chevron-right"></i> Integrated bulk user upload using Excel sheets and
+                        automated email notification dispatch.</li>
+                    <li><i data-lucide="chevron-right"></i> Built task management dashboard with real-time progress
+                        tracking.</li>
+                    <li><i data-lucide="chevron-right"></i> Improved workflow efficiency and reduced manual task
+                        tracking effort.</li>
+                </ul>
+                <div class="project_tags">
+                    <span>MongoDB</span>
+                    <span>Express.js</span>
+                    <span>React</span>
+                    <span>Node.js</span>
+                    <span>Excel Integration</span>
+                </div>
+            </div>
+
+            <!-- Project 2 (GitHub Showcase) -->
+            <div class="project_card">
+                <div class="project_card_header">
+                    <i data-lucide="globe" class="project_icon"></i>
+                    <span class="project_date">GitHub Repositories</span>
+                </div>
+                <h3>My Web Development Projects & Mini Projects</h3>
+                <p>
+                    Collection of web projects, UI layouts, and JavaScript experiments hosted on my official GitHub
+                    profile.
+                </p>
+                <ul class="project_bullets">
+                    <li><i data-lucide="chevron-right"></i> Responsive web page layouts built with standard HTML5 &
+                        CSS3.</li>
+                    <li><i data-lucide="chevron-right"></i> JavaScript DOM manipulation and interactive components.
+                    </li>
+                    <li><i data-lucide="chevron-right"></i> Clean git commit history and organized repository
+                        structure.</li>
+                </ul>
+                <div class="project_tags">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>JavaScript</span>
+                    <span>Git</span>
+                </div>
+                <!-- <div style="margin-top: 1.25rem;">
+                    <a href="https://github.com/Praveen9841" target="_blank" class="btn btn-sm btn-outline">
+                        <i data-lucide="github"></i> Visit GitHub @Praveen9841 <i data-lucide="external-link"></i>
+                    </a>
+                </div> -->
+            </div>
+        </div>
+
+        <!-- View More Projects Button (from praveengongada.com) -->
+        <div class="projects_cta reveal">
+            <a href="https://github.com/Praveen9841" target="_blank" class="btn btn-outline btn_pill">
+                <i data-lucide="git-fork"></i> View More Projects <i data-lucide="external-link"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="section_container cert_container" id="certifications">
+        <div class="section_center reveal">
+            <span class="section_subtitle"><i data-lucide="award"></i> Qualifications</span>
+            <h2 class="section_header">Certifications & Training</h2>
+            <p class="section_description">
+                Official course certifications earned during my degree program.
+            </p>
+        </div>
+
+        <div class="cert_grid reveal">
+            <div class="cert_card">
+                <div class="cert_icon"><i data-lucide="cloud"></i></div>
+                <h4>Cloud Computing</h4>
+                <p class="cert_issuer">NPTEL Online Certification || IIT Kanpur</p>
+                <p class="cert_date"><i data-lucide="calendar"></i> Jan - March 2025</p>
+            </div>
+
+            <div class="cert_card">
+                <div class="cert_icon"><i data-lucide="terminal"></i></div>
+                <h4>Java Full Stack Development</h4>
+                <p class="cert_issuer">Beeja Academy || SA Engineering College</p>
+                <p class="cert_date"><i data-lucide="calendar"></i> Jan - Feb 2025</p>
+            </div>
+
+            <div class="cert_card">
+                <div class="cert_icon"><i data-lucide="bar-chart-3"></i></div>
+                <h4>Data Analytics (Power BI) </h4>
+                <p class="cert_issuer">ICT Academy || St. Peter's Institute</p>
+                <p class="cert_date"><i data-lucide="calendar"></i> Feb - March 2024</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Connect & Contact Section -->
+    <section class="section_container contact_container" id="contact">
+        <div class="section_center reveal">
+            <span class="section_subtitle"><i data-lucide="sparkles"></i> Let's Connect</span>
+            <h2 class="section_header">Connect <span class="gradient_text">With Me</span></h2>
+            <!-- <p class="section_description">
+                Feel free to connect with me on these platforms to discuss tech, share ideas, or just say hello!
+
+            </p> -->
+        </div>
+
+        <!-- 4 Platform Cards Grid (Direct Reference from praveengongada.com) -->
+        <div class="connect_cards_grid reveal">
+            <a href="https://github.com/Praveen9841" target="_blank" class="connect_platform_card card_github">
+                <div class="connect_icon_circle">
+                    <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                    </svg>
+                </div>
+                <h3>GitHub</h3>
+                <p>@Praveen9841</p>
+            </a>
+
+            <a href="https://www.linkedin.com/in/mrpk9841" target="_blank" class="connect_platform_card card_linkedin">
+                <div class="connect_icon_circle">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v7.6h2.8v-7.6h-2.8M7.86 6.32a1.63 1.63 0 1 0 0 3.26 1.63 1.63 0 0 0 0-3.26z" />
+                    </svg>
+                </div>
+                <h3>LinkedIn</h3>
+                <p>Connect with me</p>
+            </a>
+
+            <a href="mailto:praveenkumarrao9841@gmail.com" class="connect_platform_card card_email">
+                <div class="connect_icon_circle">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <rect width="20" height="16" x="2" y="4" rx="2" />
+                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                    </svg>
+                </div>
+                <h3>Email</h3>
+                <p>praveenkumarrao9841@gmail.com</p>
+            </a>
+
+            <a href="https://wa.me/7299806051" target="_blank" class="connect_platform_card card_whatsapp">
+                <div class="connect_icon_circle">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.41a8.175 8.175 0 012.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.188 8.188 0 01-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.43 1.03 2.6c.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.6.19 1.15.16 1.59.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.18-.48-.31z" />
+                    </svg>
+                </div>
+                <h3>WhatsApp</h3>
+                <p>+91 72998 06051</p>
+            </a>
+        </div>
+
+        <div class="contact_wrapper reveal">
+            <!-- Info Box -->
+            <div class="contact_info_box">
+                <div class="info_card">
+                    <div class="info_icon"><i data-lucide="mail"></i></div>
+                    <div>
+                        <h4>Email</h4>
+                        <p><a href="mailto:praveenkumarrao9841@gmail.com">praveenkumarrao9841@gmail.com</a></p>
+                    </div>
+                </div>
+
+                <div class="info_card">
+                    <div class="info_icon"><i data-lucide="phone"></i></div>
+                    <div>
+                        <h4>Phone</h4>
+                        <p><a href="tel:+917299806051">+91 72998 06051</a></p>
+                    </div>
+                </div>
+
+                <div class="info_card">
+                    <div class="info_icon"><i data-lucide="map-pin"></i></div>
+                    <div>
+                        <h4>Location</h4>
+                        <p>Chennai, Tamil Nadu, India</p>
+                    </div>
+                </div>
+
+                <div class="info_card">
+                    <div class="info_icon"><i data-lucide="link-2"></i></div>
+                    <div>
+                        <h4>Profiles</h4>
+                        <p>
+                            <a href="https://github.com/Praveen9841" target="_blank">GitHub</a> |
+                            <a href="https://www.linkedin.com/in/mrpk9841" target="_blank">LinkedIn</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <form class="contact_form" id="contact-form">
+                <div class="form_group">
+                    <label for="name"><i data-lucide="user"></i> Your Name</label>
+                    <input type="text" id="name" required placeholder="e.g. Hiring Manager" />
+                </div>
+                <div class="form_group">
+                    <label for="email"><i data-lucide="mail"></i> Your Email</label>
+                    <input type="email" id="email" required placeholder="e.g. hr@company.com" />
+                </div>
+                <div class="form_group">
+                    <label for="message"><i data-lucide="message-square"></i> Message</label>
+                    <textarea id="message" rows="5" required placeholder="Enter your message here..."></textarea>
+                </div>
+                <button type="submit" class="btn btn_full">
+                    <i data-lucide="send"></i> Send Message
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Notification Toast -->
+    <div class="toast" id="toast">
+        <i data-lucide="check-circle-2" class="toast_icon"></i>
+        <span id="toast-message">Thank you! Your message has been sent successfully.</span>
+    </div>
+
+    <!-- Floating Back To Top Button -->
+    <button class="back_to_top" id="backToTop" aria-label="Back to Top" title="Back to Top">
+        <i data-lucide="arrow-up"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer_content">
+            <p>Crafted by <strong>Praveen Kumar R</strong></p>
+            <p>&copy; 2026 Praveen. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
